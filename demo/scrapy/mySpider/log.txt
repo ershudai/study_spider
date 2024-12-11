@@ -1,0 +1,338 @@
+2024-12-11 14:06:21 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: mySpider)
+2024-12-11 14:06:21 [scrapy.utils.log] INFO: Versions: lxml 5.3.0.0, libxml2 2.11.7, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 20.3.0, Python 3.7.8 (tags/v3.7.8:4b47a5b6ba, Jun 28 2020, 08:53:46) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 3.4.8, Platform Windows-10-10.0.19041-SP0
+2024-12-11 14:06:21 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2024-12-11 14:06:21 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.windows_events._WindowsSelectorEventLoop
+2024-12-11 14:06:21 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'mySpider',
+ 'FEED_EXPORT_ENCODING': '"utf-8"',
+ 'LOG_FILE': './log.txt',
+ 'NEWSPIDER_MODULE': 'mySpider.spiders',
+ 'SPIDER_MODULES': ['mySpider.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+ 'USER_AGENT': "USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+               'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 '
+               "Safari/537.36'"}
+2024-12-11 14:06:21 [scrapy.extensions.telnet] INFO: Telnet Password: ee5fa1317c447673
+2024-12-11 14:06:21 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+2024-12-11 14:06:21 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2024-12-11 14:06:21 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2024-12-11 14:06:21 [scrapy.middleware] INFO: Enabled item pipelines:
+['mySpider.pipelines.MyspiderPipeline']
+2024-12-11 14:06:21 [scrapy.core.engine] INFO: Spider opened
+2024-12-11 14:06:21 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2024-12-11 14:06:21 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2024-12-11 14:06:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D75%26filter%3D> from <GET https://movie.douban.com/top250?start=75&filter=>
+2024-12-11 14:06:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D0%26filter%3D> from <GET https://movie.douban.com/top250?start=0&filter=>
+2024-12-11 14:06:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D25%26filter%3D> from <GET https://movie.douban.com/top250?start=25&filter=>
+2024-12-11 14:06:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D125%26filter%3D> from <GET https://movie.douban.com/top250?start=125&filter=>
+2024-12-11 14:06:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D50%26filter%3D> from <GET https://movie.douban.com/top250?start=50&filter=>
+2024-12-11 14:06:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D150%26filter%3D> from <GET https://movie.douban.com/top250?start=150&filter=>
+2024-12-11 14:06:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D100%26filter%3D> from <GET https://movie.douban.com/top250?start=100&filter=>
+2024-12-11 14:06:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D175%26filter%3D> from <GET https://movie.douban.com/top250?start=175&filter=>
+2024-12-11 14:06:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D200%26filter%3D> from <GET https://movie.douban.com/top250?start=200&filter=>
+2024-12-11 14:06:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D225%26filter%3D> from <GET https://movie.douban.com/top250?start=225&filter=>
+2024-12-11 14:06:22 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D50%26filter%3D> (referer: None)
+2024-12-11 14:06:22 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D150%26filter%3D> (referer: None)
+2024-12-11 14:06:22 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D125%26filter%3D> (referer: None)
+2024-12-11 14:06:22 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D175%26filter%3D> (referer: None)
+2024-12-11 14:06:22 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D100%26filter%3D> (referer: None)
+2024-12-11 14:06:22 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D25%26filter%3D> (referer: None)
+2024-12-11 14:06:22 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D0%26filter%3D> (referer: None)
+2024-12-11 14:06:22 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D75%26filter%3D> (referer: None)
+2024-12-11 14:06:22 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D225%26filter%3D> (referer: None)
+2024-12-11 14:06:22 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D200%26filter%3D> (referer: None)
+2024-12-11 14:06:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D150%26filter%3D>: HTTP status code is not handled or not allowed
+2024-12-11 14:06:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D50%26filter%3D>: HTTP status code is not handled or not allowed
+2024-12-11 14:06:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D125%26filter%3D>: HTTP status code is not handled or not allowed
+2024-12-11 14:06:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D175%26filter%3D>: HTTP status code is not handled or not allowed
+2024-12-11 14:06:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D100%26filter%3D>: HTTP status code is not handled or not allowed
+2024-12-11 14:06:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D25%26filter%3D>: HTTP status code is not handled or not allowed
+2024-12-11 14:06:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D0%26filter%3D>: HTTP status code is not handled or not allowed
+2024-12-11 14:06:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D225%26filter%3D>: HTTP status code is not handled or not allowed
+2024-12-11 14:06:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D200%26filter%3D>: HTTP status code is not handled or not allowed
+2024-12-11 14:06:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D75%26filter%3D>: HTTP status code is not handled or not allowed
+2024-12-11 14:06:22 [scrapy.core.engine] INFO: Closing spider (finished)
+2024-12-11 14:06:22 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 7390,
+ 'downloader/request_count': 20,
+ 'downloader/request_method_count/GET': 20,
+ 'downloader/response_bytes': 12830,
+ 'downloader/response_count': 20,
+ 'downloader/response_status_count/302': 10,
+ 'downloader/response_status_count/403': 10,
+ 'elapsed_time_seconds': 0.715136,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2024, 12, 11, 6, 6, 22, 574693),
+ 'httpcompression/response_bytes': 10665,
+ 'httpcompression/response_count': 10,
+ 'httperror/response_ignored_count': 10,
+ 'httperror/response_ignored_status_count/403': 10,
+ 'log_count/DEBUG': 20,
+ 'log_count/INFO': 20,
+ 'response_received_count': 10,
+ 'scheduler/dequeued': 20,
+ 'scheduler/dequeued/memory': 20,
+ 'scheduler/enqueued': 20,
+ 'scheduler/enqueued/memory': 20,
+ 'start_time': datetime.datetime(2024, 12, 11, 6, 6, 21, 859557)}
+2024-12-11 14:06:22 [scrapy.core.engine] INFO: Spider closed (finished)
+2024-12-11 14:07:26 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: mySpider)
+2024-12-11 14:07:26 [scrapy.utils.log] INFO: Versions: lxml 5.3.0.0, libxml2 2.11.7, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 20.3.0, Python 3.7.8 (tags/v3.7.8:4b47a5b6ba, Jun 28 2020, 08:53:46) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 3.4.8, Platform Windows-10-10.0.19041-SP0
+2024-12-11 14:07:26 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2024-12-11 14:07:26 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.windows_events._WindowsSelectorEventLoop
+2024-12-11 14:07:26 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'mySpider',
+ 'FEED_EXPORT_ENCODING': '"utf-8"',
+ 'LOG_FILE': './log.txt',
+ 'NEWSPIDER_MODULE': 'mySpider.spiders',
+ 'SPIDER_MODULES': ['mySpider.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+ 'USER_AGENT': "USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+               'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 '
+               "Safari/537.36'"}
+2024-12-11 14:07:26 [scrapy.extensions.telnet] INFO: Telnet Password: 70be8a7410be5d57
+2024-12-11 14:07:26 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+2024-12-11 14:07:26 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2024-12-11 14:07:26 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2024-12-11 14:07:26 [scrapy.middleware] INFO: Enabled item pipelines:
+['mySpider.pipelines.MyspiderPipeline']
+2024-12-11 14:07:26 [scrapy.core.engine] INFO: Spider opened
+2024-12-11 14:07:26 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2024-12-11 14:07:26 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2024-12-11 14:07:26 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D25%26filter%3D> from <GET https://movie.douban.com/top250?start=25&filter=>
+2024-12-11 14:07:26 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D50%26filter%3D> from <GET https://movie.douban.com/top250?start=50&filter=>
+2024-12-11 14:07:26 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D0%26filter%3D> from <GET https://movie.douban.com/top250?start=0&filter=>
+2024-12-11 14:07:26 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D100%26filter%3D> from <GET https://movie.douban.com/top250?start=100&filter=>
+2024-12-11 14:07:26 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D125%26filter%3D> from <GET https://movie.douban.com/top250?start=125&filter=>
+2024-12-11 14:07:26 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D75%26filter%3D> from <GET https://movie.douban.com/top250?start=75&filter=>
+2024-12-11 14:07:26 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D175%26filter%3D> from <GET https://movie.douban.com/top250?start=175&filter=>
+2024-12-11 14:07:26 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D200%26filter%3D> from <GET https://movie.douban.com/top250?start=200&filter=>
+2024-12-11 14:07:26 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D225%26filter%3D> from <GET https://movie.douban.com/top250?start=225&filter=>
+2024-12-11 14:07:26 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D150%26filter%3D> from <GET https://movie.douban.com/top250?start=150&filter=>
+2024-12-11 14:07:27 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D0%26filter%3D> (referer: None)
+2024-12-11 14:07:27 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D125%26filter%3D> (referer: None)
+2024-12-11 14:07:27 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D25%26filter%3D> (referer: None)
+2024-12-11 14:07:27 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D100%26filter%3D> (referer: None)
+2024-12-11 14:07:27 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D50%26filter%3D> (referer: None)
+2024-12-11 14:07:27 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D75%26filter%3D> (referer: None)
+2024-12-11 14:07:27 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D225%26filter%3D> (referer: None)
+2024-12-11 14:07:27 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D175%26filter%3D> (referer: None)
+2024-12-11 14:07:27 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D150%26filter%3D> (referer: None)
+2024-12-11 14:07:27 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D200%26filter%3D> (referer: None)
+2024-12-11 14:07:27 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D125%26filter%3D>: HTTP status code is not handled or not allowed
+2024-12-11 14:07:27 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D0%26filter%3D>: HTTP status code is not handled or not allowed
+2024-12-11 14:07:27 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D25%26filter%3D>: HTTP status code is not handled or not allowed
+2024-12-11 14:07:27 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D100%26filter%3D>: HTTP status code is not handled or not allowed
+2024-12-11 14:07:27 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D50%26filter%3D>: HTTP status code is not handled or not allowed
+2024-12-11 14:07:27 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D75%26filter%3D>: HTTP status code is not handled or not allowed
+2024-12-11 14:07:27 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D150%26filter%3D>: HTTP status code is not handled or not allowed
+2024-12-11 14:07:27 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D200%26filter%3D>: HTTP status code is not handled or not allowed
+2024-12-11 14:07:27 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D225%26filter%3D>: HTTP status code is not handled or not allowed
+2024-12-11 14:07:27 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D175%26filter%3D>: HTTP status code is not handled or not allowed
+2024-12-11 14:07:27 [scrapy.core.engine] INFO: Closing spider (finished)
+2024-12-11 14:07:27 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 7390,
+ 'downloader/request_count': 20,
+ 'downloader/request_method_count/GET': 20,
+ 'downloader/response_bytes': 12830,
+ 'downloader/response_count': 20,
+ 'downloader/response_status_count/302': 10,
+ 'downloader/response_status_count/403': 10,
+ 'elapsed_time_seconds': 0.625718,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2024, 12, 11, 6, 7, 27, 297088),
+ 'httpcompression/response_bytes': 10665,
+ 'httpcompression/response_count': 10,
+ 'httperror/response_ignored_count': 10,
+ 'httperror/response_ignored_status_count/403': 10,
+ 'log_count/DEBUG': 20,
+ 'log_count/INFO': 20,
+ 'response_received_count': 10,
+ 'scheduler/dequeued': 20,
+ 'scheduler/dequeued/memory': 20,
+ 'scheduler/enqueued': 20,
+ 'scheduler/enqueued/memory': 20,
+ 'start_time': datetime.datetime(2024, 12, 11, 6, 7, 26, 671370)}
+2024-12-11 14:07:27 [scrapy.core.engine] INFO: Spider closed (finished)
+2024-12-11 14:10:51 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: mySpider)
+2024-12-11 14:10:51 [scrapy.utils.log] INFO: Versions: lxml 5.3.0.0, libxml2 2.11.7, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 20.3.0, Python 3.7.8 (tags/v3.7.8:4b47a5b6ba, Jun 28 2020, 08:53:46) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 3.4.8, Platform Windows-10-10.0.19041-SP0
+2024-12-11 14:10:51 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2024-12-11 14:10:51 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.windows_events._WindowsSelectorEventLoop
+2024-12-11 14:10:51 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'mySpider',
+ 'DUPEFILTER_CLASS': 'scrapy.dupefilters.BaseDupeFilter',
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOGSTATS_INTERVAL': 0,
+ 'LOG_FILE': './log.txt',
+ 'NEWSPIDER_MODULE': 'mySpider.spiders',
+ 'SPIDER_MODULES': ['mySpider.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+ 'USER_AGENT': "USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+               'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 '
+               "Safari/537.36'"}
+2024-12-11 14:10:51 [scrapy.extensions.telnet] INFO: Telnet Password: 1f9421ee9045bd16
+2024-12-11 14:10:51 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole']
+2024-12-11 14:10:51 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2024-12-11 14:10:51 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2024-12-11 14:10:51 [scrapy.middleware] INFO: Enabled item pipelines:
+['mySpider.pipelines.MyspiderPipeline']
+2024-12-11 14:10:51 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2024-12-11 14:10:51 [scrapy.core.engine] INFO: Spider opened
+2024-12-11 14:10:51 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250> from <GET https://movie.douban.com/top250>
+2024-12-11 14:10:51 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250> (referer: None)
+2024-12-11 14:23:22 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: mySpider)
+2024-12-11 14:23:22 [scrapy.utils.log] INFO: Versions: lxml 5.3.0.0, libxml2 2.11.7, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 20.3.0, Python 3.7.8 (tags/v3.7.8:4b47a5b6ba, Jun 28 2020, 08:53:46) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 3.4.8, Platform Windows-10-10.0.19041-SP0
+2024-12-11 14:23:22 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2024-12-11 14:23:22 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.windows_events._WindowsSelectorEventLoop
+2024-12-11 14:23:22 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'mySpider',
+ 'FEED_EXPORT_ENCODING': '"utf-8"',
+ 'LOG_FILE': './log.txt',
+ 'NEWSPIDER_MODULE': 'mySpider.spiders',
+ 'SPIDER_MODULES': ['mySpider.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+ 'USER_AGENT': "USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+               'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 '
+               "Safari/537.36'"}
+2024-12-11 14:23:22 [scrapy.extensions.telnet] INFO: Telnet Password: ccf2a981dd84afbd
+2024-12-11 14:23:22 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+2024-12-11 14:23:22 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2024-12-11 14:23:22 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2024-12-11 14:23:22 [scrapy.middleware] INFO: Enabled item pipelines:
+['mySpider.pipelines.MyspiderPipeline']
+2024-12-11 14:23:22 [scrapy.core.engine] INFO: Spider opened
+2024-12-11 14:23:22 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2024-12-11 14:23:22 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2024-12-11 14:23:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D75%26filter%3D> from <GET https://movie.douban.com/top250?start=75&filter=>
+2024-12-11 14:23:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D50%26filter%3D> from <GET https://movie.douban.com/top250?start=50&filter=>
+2024-12-11 14:23:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D125%26filter%3D> from <GET https://movie.douban.com/top250?start=125&filter=>
+2024-12-11 14:23:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D100%26filter%3D> from <GET https://movie.douban.com/top250?start=100&filter=>
+2024-12-11 14:23:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D175%26filter%3D> from <GET https://movie.douban.com/top250?start=175&filter=>
+2024-12-11 14:23:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D0%26filter%3D> from <GET https://movie.douban.com/top250?start=0&filter=>
+2024-12-11 14:23:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D150%26filter%3D> from <GET https://movie.douban.com/top250?start=150&filter=>
+2024-12-11 14:23:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D25%26filter%3D> from <GET https://movie.douban.com/top250?start=25&filter=>
+2024-12-11 14:23:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D200%26filter%3D> from <GET https://movie.douban.com/top250?start=200&filter=>
+2024-12-11 14:23:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D225%26filter%3D> from <GET https://movie.douban.com/top250?start=225&filter=>
+2024-12-11 14:23:22 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D0%26filter%3D> (referer: None)
+2024-12-11 14:23:22 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D175%26filter%3D> (referer: None)
+2024-12-11 14:23:22 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D75%26filter%3D> (referer: None)
+2024-12-11 14:23:22 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D100%26filter%3D> (referer: None)
+2024-12-11 14:23:22 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D25%26filter%3D> (referer: None)
+2024-12-11 14:23:23 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D150%26filter%3D> (referer: None)
+2024-12-11 14:23:23 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D125%26filter%3D> (referer: None)
+2024-12-11 14:23:23 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D50%26filter%3D> (referer: None)
+2024-12-11 14:23:23 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D200%26filter%3D> (referer: None)
+2024-12-11 14:23:23 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D225%26filter%3D> (referer: None)
+2024-12-11 14:23:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D0%26filter%3D>: HTTP status code is not handled or not allowed
+2024-12-11 14:23:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D175%26filter%3D>: HTTP status code is not handled or not allowed
+2024-12-11 14:23:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D75%26filter%3D>: HTTP status code is not handled or not allowed
+2024-12-11 14:23:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D100%26filter%3D>: HTTP status code is not handled or not allowed
+2024-12-11 14:23:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D25%26filter%3D>: HTTP status code is not handled or not allowed
+2024-12-11 14:23:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D150%26filter%3D>: HTTP status code is not handled or not allowed
+2024-12-11 14:23:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D50%26filter%3D>: HTTP status code is not handled or not allowed
+2024-12-11 14:23:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D125%26filter%3D>: HTTP status code is not handled or not allowed
+2024-12-11 14:23:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D225%26filter%3D>: HTTP status code is not handled or not allowed
+2024-12-11 14:23:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://sec.douban.com/b?r=https%3A%2F%2Fmovie.douban.com%2Ftop250%3Fstart%3D200%26filter%3D>: HTTP status code is not handled or not allowed
+2024-12-11 14:23:23 [scrapy.core.engine] INFO: Closing spider (finished)
+2024-12-11 14:23:23 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 7390,
+ 'downloader/request_count': 20,
+ 'downloader/request_method_count/GET': 20,
+ 'downloader/response_bytes': 12830,
+ 'downloader/response_count': 20,
+ 'downloader/response_status_count/302': 10,
+ 'downloader/response_status_count/403': 10,
+ 'elapsed_time_seconds': 0.633719,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2024, 12, 11, 6, 23, 23, 159774),
+ 'httpcompression/response_bytes': 10665,
+ 'httpcompression/response_count': 10,
+ 'httperror/response_ignored_count': 10,
+ 'httperror/response_ignored_status_count/403': 10,
+ 'log_count/DEBUG': 20,
+ 'log_count/INFO': 20,
+ 'response_received_count': 10,
+ 'scheduler/dequeued': 20,
+ 'scheduler/dequeued/memory': 20,
+ 'scheduler/enqueued': 20,
+ 'scheduler/enqueued/memory': 20,
+ 'start_time': datetime.datetime(2024, 12, 11, 6, 23, 22, 526055)}
+2024-12-11 14:23:23 [scrapy.core.engine] INFO: Spider closed (finished)
