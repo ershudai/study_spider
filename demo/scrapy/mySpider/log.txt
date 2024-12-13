@@ -336,3 +336,601 @@
  'scheduler/enqueued/memory': 20,
  'start_time': datetime.datetime(2024, 12, 11, 6, 23, 22, 526055)}
 2024-12-11 14:23:23 [scrapy.core.engine] INFO: Spider closed (finished)
+2024-12-12 11:53:06 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: mySpider)
+2024-12-12 11:53:06 [scrapy.utils.log] INFO: Versions: lxml 5.3.0.0, libxml2 2.11.7, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 20.3.0, Python 3.7.8 (tags/v3.7.8:4b47a5b6ba, Jun 28 2020, 08:53:46) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 3.4.8, Platform Windows-10-10.0.19041-SP0
+2024-12-12 11:53:06 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2024-12-12 11:53:06 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.windows_events._WindowsSelectorEventLoop
+2024-12-12 11:53:06 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'mySpider',
+ 'FEED_EXPORT_ENCODING': '"utf-8"',
+ 'LOG_FILE': './log.txt',
+ 'NEWSPIDER_MODULE': 'mySpider.spiders',
+ 'SPIDER_MODULES': ['mySpider.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+ 'USER_AGENT': "USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+               'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 '
+               "Safari/537.36'"}
+2024-12-12 11:53:06 [scrapy.extensions.telnet] INFO: Telnet Password: bfde0442586feee6
+2024-12-12 11:53:06 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+2024-12-12 11:53:06 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2024-12-12 11:53:06 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2024-12-12 11:53:06 [scrapy.middleware] INFO: Enabled item pipelines:
+['mySpider.pipelines.MyspiderPipeline']
+2024-12-12 11:53:06 [scrapy.core.engine] INFO: Spider opened
+2024-12-12 11:53:06 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2024-12-12 11:53:06 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2024-12-12 11:53:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://movie.douban.com/top250?start=125&filter=> (referer: None)
+2024-12-12 11:53:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://movie.douban.com/top250?start=175&filter=> (referer: None)
+2024-12-12 11:53:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://movie.douban.com/top250?start=0&filter=> (referer: None)
+2024-12-12 11:53:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://movie.douban.com/top250?start=100&filter=> (referer: None)
+2024-12-12 11:53:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://movie.douban.com/top250?start=50&filter=> (referer: None)
+2024-12-12 11:53:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://movie.douban.com/top250?start=25&filter=> (referer: None)
+2024-12-12 11:53:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://movie.douban.com/top250?start=150&filter=> (referer: None)
+2024-12-12 11:53:07 [py.warnings] WARNING: D:\my_spider_mk\demo\scrapy\venv\lib\site-packages\scrapy\selector\unified.py:82: UserWarning: Selector got both text and root, root is being ignored.
+  super().__init__(text=text, type=st, root=root, **kwargs)
+
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=125&filter=>
+{'quote': '坏人的好总是比好人的好来得更感人。', 'rating': '9.1', 'title': '完美的世界'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=125&filter=>
+{'quote': '一场华丽的意淫。', 'rating': '8.8', 'title': '阳光灿烂的日子'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=125&filter=>
+{'quote': '那些静得只能听见呼吸的日子里，你明白孤独即生活。', 'rating': '9.0', 'title': '小森林 夏秋篇'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=125&filter=>
+{'quote': '法式小清新。 ', 'rating': '8.7', 'title': '天使爱美丽'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=125&filter=>
+{'quote': '和谐的生活离不开摸头与被摸头。', 'rating': '8.8', 'title': '驯龙高手'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=125&filter=>
+{'quote': '少女情怀总是诗。', 'rating': '8.9', 'title': '侧耳倾听'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=125&filter=>
+{'quote': '愿我们都不用长大，每一座城堡都能永远存在。', 'rating': '8.8', 'title': '头脑特工队'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=125&filter=>
+{'quote': '要做就做得狠一点，这样才能活下去。', 'rating': '8.9', 'title': '新世界'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=125&filter=>
+{'quote': '不要给它起名字，起了名字就有感情了。', 'rating': '8.8', 'title': '怪兽电力公司'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=125&filter=>
+{'quote': '任何信念的力量，都无法改变命运。', 'rating': '9.0', 'title': '教父3'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=125&filter=>
+{'quote': '爱是摈弃傲慢与偏见之后的曙光。', 'rating': '8.7', 'title': '傲慢与偏见'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=125&filter=>
+{'quote': '惠及一生的美丽。', 'rating': '8.9', 'title': '一个叫欧维的男人决定去死'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=125&filter=>
+{'quote': '跨度十五年的欢乐与泪水。', 'rating': '8.9', 'title': '玩具总动员3'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=125&filter=>
+{'quote': '有时候幸福需要等一等。 ', 'rating': '8.8', 'title': '幸福终点站'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=125&filter=>
+{'quote': '尊敬他人，尊敬你生活的这片土地，明白孤独是人生的常态。', 'rating': '9.0', 'title': '小森林 冬春篇'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=125&filter=>
+{'quote': '假戏真情，爱欲深海', 'rating': '8.7', 'title': '色，戒'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=125&filter=>
+{'quote': '热血沸腾，那个低俗、性感的无耻混蛋又来了。', 'rating': '8.8', 'title': '被解救的姜戈'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=175&filter=>
+{'quote': '所谓爱情，就是话唠一路，都不会心生腻烦，彼此嫌弃。', 'rating': '8.9', 'title': '爱在午夜降临前'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=175&filter=>
+{'quote': '英雄泪短，兄弟情长。 ', 'rating': '8.6', 'title': '英雄本色'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=175&filter=>
+{'quote': '动画片的圣经。', 'rating': '8.9', 'title': '风之谷'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=175&filter=>
+{'quote': None, 'rating': '8.8', 'title': '无间道2'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=175&filter=>
+{'quote': '中国版《两杆大烟枪》。', 'rating': '8.6', 'title': '疯狂的石头'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=175&filter=>
+{'quote': '现代科幻电影的开山之作，最伟大导演的最伟大影片。', 'rating': '8.9', 'title': '2001太空漫游'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=175&filter=>
+{'quote': '骨灰级歌舞片。', 'rating': '9.1', 'title': '雨中曲'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=175&filter=>
+{'quote': '香港浪漫主义警匪动作片的巅峰之作。', 'rating': '8.8', 'title': '纵横四海'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=175&filter=>
+{'quote': '当这个世界闭上双眼，他却敞开了怀抱。', 'rating': '8.9', 'title': '卢旺达饭店'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=175&filter=>
+{'quote': '一个针管引发的血案。', 'rating': '8.7', 'title': '记忆碎片'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=175&filter=>
+{'quote': '我们组成了家。', 'rating': '8.7', 'title': '小偷家族'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=175&filter=>
+{'quote': '迪士尼和皮克斯拿错剧本的产物。', 'rating': '8.7', 'title': '无敌破坏王'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=175&filter=>
+{'quote': '岁月流逝，来日可追。', 'rating': '8.7', 'title': '岁月神偷'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=175&filter=>
+{'quote': '松鼠才是角儿。', 'rating': '8.6', 'title': '冰川时代'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=175&filter=>
+{'quote': '弱者送给弱者的一刀。', 'rating': '8.9', 'title': '牯岭街少年杀人事件'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=175&filter=>
+{'quote': '始于荒诞，止于更荒诞。', 'rating': '8.8', 'title': '荒蛮故事'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=175&filter=>
+{'quote': '养狗三日，便会对你终其一生。', 'rating': '9.2', 'title': '忠犬八公物语'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=175&filter=>
+{'quote': '不要企图在重复中寻找已经失去的爱。', 'rating': '8.5', 'title': '恐怖游轮'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=175&filter=>
+{'quote': '这个世界从不善待努力的人，努力了也不一定会成功，但是知道自己在努力，就是活下去的动力。',
+ 'rating': '8.6',
+ 'title': '爆裂鼓手'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=175&filter=>
+{'quote': '没有了退路，只好飞向自由。', 'rating': '9.0', 'title': '末路狂花'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=175&filter=>
+{'quote': None, 'rating': '9.0', 'title': '东京教父'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=175&filter=>
+{'quote': '宫崎骏的电影总让人感觉世界是美好的，阳光明媚的。', 'rating': '8.7', 'title': '魔女宅急便'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=175&filter=>
+{'quote': '人们可以登上月球，却永远无法探索人们内心的宇宙。', 'rating': '8.7', 'title': '大佛普拉斯'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=0&filter=>
+{'quote': '希望让人自由。', 'rating': '9.7', 'title': '肖申克的救赎'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=0&filter=>
+{'quote': '风华绝代。', 'rating': '9.6', 'title': '霸王别姬'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=0&filter=>
+{'quote': '一部美国近现代史。', 'rating': '9.5', 'title': '阿甘正传'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=0&filter=>
+{'quote': '失去的才是永恒的。 ', 'rating': '9.5', 'title': '泰坦尼克号'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=0&filter=>
+{'quote': '最好的宫崎骏，最好的久石让。 ', 'rating': '9.4', 'title': '千与千寻'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=0&filter=>
+{'quote': '最美的谎言。', 'rating': '9.5', 'title': '美丽人生'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=0&filter=>
+{'quote': '怪蜀黍和小萝莉不得不说的故事。', 'rating': '9.4', 'title': '这个杀手不太冷'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=0&filter=>
+{'quote': '爱是一种力量，让我们超越时空感知它的存在。', 'rating': '9.4', 'title': '星际穿越'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=0&filter=>
+{'quote': '诺兰给了我们一场无法盗取的梦。', 'rating': '9.4', 'title': '盗梦空间'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=0&filter=>
+{'quote': '如果再也不能见到你，祝你早安，午安，晚安。', 'rating': '9.4', 'title': '楚门的世界'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=0&filter=>
+{'quote': '拯救一个人，就是拯救整个世界。', 'rating': '9.5', 'title': '辛德勒的名单'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=0&filter=>
+{'quote': '永远都不能忘记你所爱的人。', 'rating': '9.4', 'title': '忠犬八公的故事'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=0&filter=>
+{'quote': '每个人都要走一条自己坚定了的路，就算是粉身碎骨。 ', 'rating': '9.3', 'title': '海上钢琴师'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=0&filter=>
+{'quote': '英俊版憨豆，高情商版谢耳朵。', 'rating': '9.2', 'title': '三傻大闹宝莱坞'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=0&filter=>
+{'quote': '天籁一般的童声，是最接近上帝的存在。 ', 'rating': '9.3', 'title': '放牛班的春天'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=0&filter=>
+{'quote': '小瓦力，大人生。', 'rating': '9.3', 'title': '机器人总动员'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=0&filter=>
+{'quote': '迪士尼给我们营造的乌托邦就是这样，永远善良勇敢，永远出乎意料。', 'rating': '9.2', 'title': '疯狂动物城'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=0&filter=>
+{'quote': '香港电影史上永不过时的杰作。', 'rating': '9.3', 'title': '无间道'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=0&filter=>
+{'quote': '比利·怀德满分作品。', 'rating': '9.6', 'title': '控方证人'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=0&filter=>
+{'quote': '一生所爱。', 'rating': '9.2', 'title': '大话西游之大圣娶亲'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=0&filter=>
+{'quote': '我们一路奋战不是为了改变世界，而是为了不让世界改变我们。', 'rating': '9.3', 'title': '熔炉'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=0&filter=>
+{'quote': '千万不要记恨你的对手，这样会让你失去理智。', 'rating': '9.3', 'title': '教父'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=100&filter=>
+{'quote': '《我是山姆》的《美丽人生》。', 'rating': '8.9', 'title': '7号房的礼物'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=100&filter=>
+{'quote': '诺兰就是保证。', 'rating': '8.9', 'title': '蝙蝠侠：黑暗骑士崛起'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=100&filter=>
+{'quote': '相逢只要一瞬间，等待却像是一辈子。', 'rating': '8.9', 'title': '甜蜜蜜'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=100&filter=>
+{'quote': '以戏谑来戏谑戏谑。', 'rating': '8.8', 'title': '被嫌弃的松子的一生'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=100&filter=>
+{'quote': '缘分是个连绵词，最美不过一瞬。', 'rating': '8.8', 'title': '爱在黎明破晓前'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=100&filter=>
+{'quote': 'Balalala~~~', 'rating': '8.8', 'title': '超能陆战队'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=100&filter=>
+{'quote': '深入内心的恐怖，出人意料的结局。', 'rating': '8.9', 'title': '第六感'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=100&filter=>
+{'quote': None, 'rating': '8.8', 'title': '寄生虫'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=100&filter=>
+{'quote': '寂寞没有期限。', 'rating': '8.8', 'title': '重庆森林'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=100&filter=>
+{'quote': '九年后的重逢是世俗和责任的交叠，没了悸动和青涩，沧桑而温暖。', 'rating': '8.9', 'title': '爱在日落黄昏时'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=100&filter=>
+{'quote': '死可能是一道门，逝去并不是终结，而是超越，走向下一程。', 'rating': '8.9', 'title': '入殓师'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=100&filter=>
+{'quote': '人与自然的战争史诗。', 'rating': '8.9', 'title': '幽灵公主'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=100&filter=>
+{'quote': '沉醉在电影的情感和视听氛围中无法自拔。', 'rating': '8.8', 'title': '请以你的名字呼唤我'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=100&filter=>
+{'quote': '浪漫忧郁的成人童话。', 'rating': '8.7', 'title': '剪刀手爱德华'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=100&filter=>
+{'quote': '每个人心中都有一座断背山。', 'rating': '8.8', 'title': '断背山'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=100&filter=>
+{'quote': '史诗大片的典范。', 'rating': '8.9', 'title': '勇敢的心'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=100&filter=>
+{'quote': '从没见过那么流氓的温柔，从没见过那么温柔的流氓。', 'rating': '8.9', 'title': '菊次郎的夏天'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=100&filter=>
+{'quote': '曾经的那段美好会沉淀为一辈子的记忆。', 'rating': '8.9', 'title': '借东西的小人阿莉埃蒂'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=100&filter=>
+{'quote': '好的剧本是，就算你猜到了结局也猜不到全部。', 'rating': '9.1', 'title': '未麻的部屋'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=100&filter=>
+{'quote': None, 'rating': '8.8', 'title': '哈利·波特与火焰杯'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=100&filter=>
+{'quote': '年度最佳date movie。', 'rating': '8.7', 'title': '消失的爱人'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=100&filter=>
+{'quote': '我的平常生活就是他人的幸福。', 'rating': '9.1', 'title': '无人知晓'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=50&filter=>
+{'quote': '史上最美的探戈。', 'rating': '9.1', 'title': '闻香识女人'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=50&filter=>
+{'quote': '去除成见，需要勇气。', 'rating': '8.9', 'title': '绿皮书'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=50&filter=>
+{'quote': '经典之作，历久弥新。', 'rating': '9.4', 'title': '大闹天宫'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=50&filter=>
+{'quote': '爱情哪怕只有一天。', 'rating': '9.1', 'title': '罗马假日'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=50&filter=>
+{'quote': '视觉革命。', 'rating': '9.1', 'title': '黑客帝国'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=50&filter=>
+{'quote': '传说的开始。', 'rating': '9.1', 'title': '指环王1：护戒使者'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=50&filter=>
+{'quote': '优雅的孤独。', 'rating': '9.3', 'title': '教父2'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=50&filter=>
+{'quote': '那些吻戏，那些青春，都在影院的黑暗里被泪水冲刷得无比清晰。', 'rating': '9.2', 'title': '天堂电影院'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=50&filter=>
+{'quote': '动物版《哈姆雷特》。', 'rating': '9.1', 'title': '狮子王'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=50&filter=>
+{'quote': '电影的现实意义大过电影本身。', 'rating': '9.2', 'title': '辩护人'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=50&filter=>
+{'quote': '人生不能像做菜，把所有的料都准备好了才下锅。', 'rating': '9.2', 'title': '饮食男女'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=50&filter=>
+{'quote': '邪恶与平庸蛰伏于同一个母体，在特定的时间互相对峙。', 'rating': '9.0', 'title': '搏击俱乐部'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=50&filter=>
+{'quote': '在时间之河里感受溺水之苦。', 'rating': '9.0', 'title': '本杰明·巴顿奇事'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=50&filter=>
+{'quote': '爱是一切逻辑和原由。', 'rating': '9.1', 'title': '美丽心灵'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=50&filter=>
+{'quote': '尽管有些不切实际的幻想，这部电影依旧是一部感人肺腑的佳作。', 'rating': '9.2', 'title': '穿条纹睡衣的男孩'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=50&filter=>
+{'quote': '别样人生。', 'rating': '9.2', 'title': '窃听风暴'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=50&filter=>
+{'quote': '暗恋的极致。', 'rating': '8.9', 'title': '情书'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=50&filter=>
+{'quote': '4个臭皮匠顶个诸葛亮，盖·里奇果然不是盖的。', 'rating': '9.1', 'title': '两杆大烟枪'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=50&filter=>
+{'quote': '10年的完美句点。', 'rating': '9.0', 'title': '哈利·波特与死亡圣器(下)'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=50&filter=>
+{'quote': '用音乐化解仇恨，让歌声串起美好。', 'rating': '9.1', 'title': '音乐之声'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=50&filter=>
+{'quote': '你以为你以为的就是你以为的。', 'rating': '8.8', 'title': '看不见的客人'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=50&filter=>
+{'quote': '美丽无罪。', 'rating': '8.9', 'title': '西西里的美丽传说'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=50&filter=>
+{'quote': '绝对意义上的美轮美奂。', 'rating': '8.8', 'title': '阿凡达'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=50&filter=>
+{'quote': '美利坚精神输出大片No1.', 'rating': '9.1', 'title': '拯救大兵瑞恩'}
+2024-12-12 11:53:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://movie.douban.com/top250?start=200&filter=> (referer: None)
+2024-12-12 11:53:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://movie.douban.com/top250?start=225&filter=> (referer: None)
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=125&filter=>
+{'quote': '揭露人性的丧尸题材力作。', 'rating': '8.6', 'title': '釜山行'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=125&filter=>
+{'quote': "Mr. I Don't Care其实也有Care的时候。", 'rating': '8.7', 'title': '神偷奶爸'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=125&filter=>
+{'quote': '触不到的恋人。', 'rating': '8.8', 'title': '萤火之森'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=125&filter=>
+{'quote': None, 'rating': '8.7', 'title': '九品芝麻官'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=125&filter=>
+{'quote': '想你时你在闹海。', 'rating': '9.2', 'title': '哪吒闹海'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=125&filter=>
+{'quote': '没有一人完全善，也没有一人完全恶。', 'rating': '8.8', 'title': '告白'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=125&filter=>
+{'quote': '中国家庭的喜怒哀乐忍。', 'rating': '9.0', 'title': '喜宴'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=125&filter=>
+{'quote': '你是我最好的朋友，你是我唯一的朋友 。', 'rating': '9.0', 'title': '玛丽和马克思'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=175&filter=>
+{'quote': '用剩余不多的时间，去燃烧整个生命。', 'rating': '8.7', 'title': '遗愿清单'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=175&filter=>
+{'quote': '上帝之城+猜火车+阿甘正传+开心辞典=山寨富翁', 'rating': '8.6', 'title': '贫民窟的百万富翁'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=100&filter=>
+{'quote': '把每天当作最后一天般珍惜度过，积极拥抱生活，就是幸福。', 'rating': '8.8', 'title': '时空恋旅人'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=100&filter=>
+{'quote': None, 'rating': '9.6', 'title': '茶馆'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=100&filter=>
+{'quote': '两张绝世的脸。 ', 'rating': '8.8', 'title': '倩女幽魂'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=0&filter=>
+{'quote': '满满温情的高雅喜剧。', 'rating': '9.3', 'title': '触不可及'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=0&filter=>
+{'quote': '死亡不是真的逝去，遗忘才是永恒的消亡。', 'rating': '9.1', 'title': '寻梦环游记'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=0&filter=>
+{'quote': '平民励志片。 ', 'rating': '9.2', 'title': '当幸福来敲门'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=50&filter=>
+{'quote': '警恶惩奸，维护世界和平这个任务就交给你了，好吗？', 'rating': '8.9', 'title': '功夫'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=25&filter=>
+{'quote': '“不要跟我比惨，我比你更惨”再适合这部电影不过了。', 'rating': '9.3', 'title': '末代皇帝'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=25&filter=>
+{'quote': '人人心中都有个龙猫，童年就永远不会消失。', 'rating': '9.2', 'title': '龙猫'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=25&filter=>
+{'quote': '童话世界的开端。', 'rating': '9.2', 'title': '哈利·波特与魔法石'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=25&filter=>
+{'quote': '真正的幸福是来自内心深处。', 'rating': '9.1', 'title': '怦然心动'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=25&filter=>
+{'quote': '张艺谋最好的电影。', 'rating': '9.3', 'title': '活着'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=25&filter=>
+{'quote': '无尽的黑暗。', 'rating': '9.2', 'title': '蝙蝠侠：黑暗骑士'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=25&filter=>
+{'quote': '史诗的终章。', 'rating': '9.3', 'title': '指环王3：王者无敌'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=25&filter=>
+{'quote': '对我们国家而言，这样的电影多一部是一部。', 'rating': '9.0', 'title': '我不是药神'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=25&filter=>
+{'quote': 'Tomorrow is another day.', 'rating': '9.3', 'title': '乱世佳人'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=25&filter=>
+{'quote': '最后那些最无聊的事情，才是最值得怀念的。 ', 'rating': '9.1', 'title': '飞屋环游记'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=25&filter=>
+{'quote': '受过伤害的人总是笑得最开心，因为他们不愿意让身边的人承受一样的痛苦。', 'rating': '9.3', 'title': '素媛'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=25&filter=>
+{'quote': '带着心爱的人在天空飞翔。', 'rating': '9.1', 'title': '哈尔的移动城堡'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=25&filter=>
+{'quote': '你给我翻译翻译，神马叫做TMD的惊喜。', 'rating': '9.0', 'title': '让子弹飞'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=25&filter=>
+{'quote': '1957年的理想主义。 ', 'rating': '9.4', 'title': '十二怒汉'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=25&filter=>
+{'quote': '如果生活中有什么使你感到快乐，那就去做吧！不要管别人说什么。', 'rating': '9.3', 'title': '海蒂和爷爷'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=25&filter=>
+{'quote': '凝视卑弱生命，用电影改变命运。', 'rating': '9.1', 'title': '何以为家'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=25&filter=>
+{'quote': '骗子大师和执著警探的你追我跑故事。 ', 'rating': '9.1', 'title': '猫鼠游戏'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=25&filter=>
+{'quote': '你不是在为你一个人战斗，你要让千千万万的女性看到女生并不是只能相夫教子。',
+ 'rating': '9.0',
+ 'title': '摔跤吧！爸爸'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=25&filter=>
+{'quote': '对天空的追逐，永不停止。 ', 'rating': '9.2', 'title': '天空之城'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=25&filter=>
+{'quote': '对敌人的仁慈，就是对自己残忍。', 'rating': '9.3', 'title': '鬼子来了'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=25&filter=>
+{'quote': '瑰丽壮观、无人能及的冒险之旅。', 'rating': '9.1', 'title': '少年派的奇幻漂流'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=25&filter=>
+{'quote': '音乐能化解仇恨。', 'rating': '9.3', 'title': '钢琴家'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=25&filter=>
+{'quote': '承前启后的史诗篇章。', 'rating': '9.2', 'title': '指环王2：双塔奇兵'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=25&filter=>
+{'quote': '旷古烁今。', 'rating': '9.0', 'title': '大话西游之月光宝盒'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=25&filter=>
+{'quote': '当一个死水般的体制内出现一个活跃的变数时，所有的腐臭都站在了光明的对面。',
+ 'rating': '9.2',
+ 'title': '死亡诗社'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=150&filter=>
+{'quote': '他给机器起名“克里斯托弗”，因为这是他初恋的名字。', 'rating': '8.8', 'title': '模仿游戏'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=150&filter=>
+{'quote': '写给影迷，动漫迷和游戏迷的一封情书。', 'rating': '8.6', 'title': '头号玩家'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=150&filter=>
+{'quote': '偷情本没有这样美。', 'rating': '8.8', 'title': '花样年华'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=150&filter=>
+{'quote': '抱着梦想而活着的人是幸福的，怀抱梦想而死去的人是不朽的。', 'rating': '8.8', 'title': '大鱼'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=150&filter=>
+{'quote': '时代悲歌。', 'rating': '9.3', 'title': '七武士'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=150&filter=>
+{'quote': '百看不厌。 ', 'rating': '8.7', 'title': '射雕英雄传之东成西就'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=150&filter=>
+{'quote': '故事的反转与反转，分裂电影的始祖。', 'rating': '9.0', 'title': '惊魂记'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=150&filter=>
+{'quote': '优秀的战争片不会美化战场，不会粉饰死亡，不会矮化敌人，不会无视常识，最重要的，不会宣扬战争。',
+ 'rating': '8.7',
+ 'title': '血战钢锯岭'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=150&filter=>
+{'quote': '爱并不需要智商 。', 'rating': '9.0', 'title': '我是山姆'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=150&filter=>
+{'quote': '再多各自牛逼的时光，也比不上一起傻逼的岁月。 ', 'rating': '8.8', 'title': '阳光姐妹淘'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=150&filter=>
+{'quote': '恐怖分子的“秋菊打官司”。', 'rating': '8.7', 'title': '恐怖直播'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=150&filter=>
+{'quote': '穿越错位的时空，仰望陨落的星辰，你没留下你的名字，我却无法忘记那句“我爱你”。',
+ 'rating': '8.5',
+ 'title': '你的名字。'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=150&filter=>
+{'quote': '不得不说，《黑客帝国》系列是商业片与科幻、哲学完美结合的典范。',
+ 'rating': '8.8',
+ 'title': '黑客帝国3：矩阵革命'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=150&filter=>
+{'quote': '怼天怼地，你走后，她与世界为敌。', 'rating': '8.7', 'title': '三块广告牌'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=150&filter=>
+{'quote': '荒诞讽刺，千奇百巧，抽丝剥茧，百转千回。', 'rating': '8.8', 'title': '心迷宫'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=150&filter=>
+{'quote': '真相就在眼前。', 'rating': '8.7', 'title': '电锯惊魂'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=150&filter=>
+{'quote': None, 'rating': '8.7', 'title': '小丑'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=150&filter=>
+{'quote': 'Jared Leto的腿比女人还美！', 'rating': '8.8', 'title': '达拉斯买家俱乐部'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=150&filter=>
+{'quote': None, 'rating': '9.5', 'title': '背靠背，脸对脸'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=150&filter=>
+{'quote': None, 'rating': '8.7', 'title': '心灵奇旅'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=150&filter=>
+{'quote': '老少皆宜，这就是好莱坞动画的魅力。', 'rating': '8.7', 'title': '疯狂原始人'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=150&filter=>
+{'quote': '像吃了苏打饼一样干脆的电影。', 'rating': '8.8', 'title': '谍影重重3'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=150&filter=>
+{'quote': '天使暂时离开。', 'rating': '8.9', 'title': '绿里奇迹'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=150&filter=>
+{'quote': '被上帝抛弃了的上帝之城。', 'rating': '9.0', 'title': '上帝之城'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=150&filter=>
+{'quote': '是枝裕和的家庭习作。', 'rating': '8.8', 'title': '海街日记'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=200&filter=>
+{'quote': None, 'rating': '9.5', 'title': '高山下的花环'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=200&filter=>
+{'quote': '电影诗。', 'rating': '8.6', 'title': '东邪西毒'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=200&filter=>
+{'quote': '感情不分食草或者食肉。', 'rating': '8.9', 'title': '你看起来好像很好吃'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=200&filter=>
+{'quote': '邓肯·琼斯继《月球》之后再度奉献出一部精彩绝伦的科幻佳作。', 'rating': '8.5', 'title': '源代码'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=200&filter=>
+{'quote': '“多么美好的一天！”轰轰轰砰咚，啪哒哒哒轰隆隆，磅~',
+ 'rating': '8.7',
+ 'title': '疯狂的麦克斯4：狂暴之路'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=200&filter=>
+{'quote': '坚硬的信仰。', 'rating': '8.9', 'title': '可可西里'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=200&filter=>
+{'quote': '我们都有权利不与自己的过去和解。', 'rating': '8.6', 'title': '海边的曼彻斯特'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=200&filter=>
+{'quote': '永远的小人物，伟大的卓别林。', 'rating': '9.3', 'title': '城市之光'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=200&filter=>
+{'quote': None, 'rating': '8.6', 'title': '波西米亚狂想曲'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=200&filter=>
+{'quote': '黑暗之美。', 'rating': '8.6', 'title': '黑天鹅'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=200&filter=>
+{'quote': None, 'rating': '9.3', 'title': '芙蓉镇'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=200&filter=>
+{'quote': None, 'rating': '8.4', 'title': '爱乐之城'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=200&filter=>
+{'quote': '爱，是个动词。', 'rating': '8.5', 'title': '真爱至上'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=200&filter=>
+{'quote': '人生如此，浮生如斯。谁人言，花彼岸，此生情长意短。谁都是不懂爱的罢了。', 'rating': '8.6', 'title': '青蛇'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=200&filter=>
+{'quote': None, 'rating': '8.6', 'title': '花束般的恋爱'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=200&filter=>
+{'quote': '黑小鸭速效美白记。', 'rating': '8.5', 'title': '初恋这件小事'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=200&filter=>
+{'quote': '生活在自己的世界里，也可以让周围的人显得可笑和渺小。', 'rating': '8.7', 'title': '雨人'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=200&filter=>
+{'quote': '少见的超越首部的续集，动作片中的经典。', 'rating': '8.8', 'title': '终结者2：审判日'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=200&filter=>
+{'quote': '对爱的执着，可以超越一切。', 'rating': '8.7', 'title': '人工智能'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=200&filter=>
+{'quote': '昆汀同学越来越变态了，比北野武还杜琪峰。', 'rating': '8.7', 'title': '无耻混蛋'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=200&filter=>
+{'quote': '永远看不腻的喜剧。', 'rating': '8.9', 'title': '虎口脱险'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=200&filter=>
+{'quote': '最忠于原著的一部。', 'rating': '8.6', 'title': '哈利·波特与死亡圣器(上)'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=200&filter=>
+{'quote': '嬉笑怒骂，调风动月。', 'rating': '8.7', 'title': '新龙门客栈'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=200&filter=>
+{'quote': None, 'rating': '8.6', 'title': '白日梦想家'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=200&filter=>
+{'quote': '爱情没有那么多借口，如果不能圆满，只能说明爱的不够。 ', 'rating': '8.5', 'title': '恋恋笔记本'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=225&filter=>
+{'quote': None, 'rating': '8.6', 'title': '崖上的波妞'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=225&filter=>
+{'quote': '人生的N种可能性。', 'rating': '8.8', 'title': '罗生门'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=225&filter=>
+{'quote': '一部能引人思考的科幻励志片。', 'rating': '8.8', 'title': '千钧一发'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=225&filter=>
+{'quote': '小成本大魅力。', 'rating': '8.6', 'title': '彗星来的那一夜'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=225&filter=>
+{'quote': None, 'rating': '9.0', 'title': '机器人之梦'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=225&filter=>
+{'quote': None, 'rating': '8.8', 'title': '大红灯笼高高挂'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=225&filter=>
+{'quote': None, 'rating': '8.5', 'title': '哈利·波特与凤凰社'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=225&filter=>
+{'quote': '一个精彩的世界观正在缓缓建立。', 'rating': '8.7', 'title': '黑客帝国2：重装上阵'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=225&filter=>
+{'quote': '幸福是生生不息，却难以触及的远。 ', 'rating': '8.7', 'title': '萤火虫之墓'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=225&filter=>
+{'quote': None, 'rating': '8.5', 'title': '火星救援'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=225&filter=>
+{'quote': '世界不完美，爱会有奇迹。', 'rating': '8.6', 'title': '奇迹男孩'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=225&filter=>
+{'quote': '有一些东西不应该被遗忘。', 'rating': '8.7', 'title': '二十二'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=225&filter=>
+{'quote': '做一颗让别人需要你的棋子。', 'rating': '8.7', 'title': '战争之王'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=225&filter=>
+{'quote': '日本的家庭电影已经是世界巅峰了，步履不停是巅峰中的佳作。', 'rating': '8.8', 'title': '步履不停'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=225&filter=>
+{'quote': '爱情是一场没有尽头的虚幻追逐。', 'rating': '8.8', 'title': '千年女优'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=225&filter=>
+{'quote': '每个美丽事物背后都是滴血的现实。', 'rating': '8.7', 'title': '血钻'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=225&filter=>
+{'quote': '谁说王家卫镜头很晃？', 'rating': '8.7', 'title': '谍影重重2'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=225&filter=>
+{'quote': '被偷走的岁月，被伤害的生命，被禁锢的灵魂，终将被希望和善意救赎。', 'rating': '8.8', 'title': '房间'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=225&filter=>
+{'quote': '中国式内在的美国电影。', 'rating': '8.8', 'title': '魂断蓝桥'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=225&filter=>
+{'quote': None, 'rating': '8.6', 'title': '蜘蛛侠：平行宇宙'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=225&filter=>
+{'quote': '拍掉身上的悲伤，从今天开始重新踏上追梦之旅。', 'rating': '8.7', 'title': '弱点'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=225&filter=>
+{'quote': '哗啦啦啦啦，天在下雨，哗啦啦啦啦，云在哭泣……找自己。', 'rating': '8.6', 'title': '谍影重重'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=225&filter=>
+{'quote': None, 'rating': '8.9', 'title': '隐藏人物'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=225&filter=>
+{'quote': '当爱情跨越年龄的界限，它似乎能变得更久远一点，成为一种责任，一种水到渠成的相濡以沫。 ',
+ 'rating': '8.6',
+ 'title': '朗读者'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=225&filter=>
+{'quote': '王家卫是一种风格，张国荣是一个代表。', 'rating': '8.5', 'title': '阿飞正传'}
+2024-12-12 11:53:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://movie.douban.com/top250?start=75&filter=> (referer: None)
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=75&filter=>
+{'quote': '不一样的导演，不一样的哈利·波特。', 'rating': '9.0', 'title': '哈利·波特与阿兹卡班的囚徒'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=75&filter=>
+{'quote': '奔跑的孩子是天使。', 'rating': '9.2', 'title': '小鞋子'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=75&filter=>
+{'quote': '自由万岁。', 'rating': '9.1', 'title': '飞越疯人院'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=75&filter=>
+{'quote': '安东尼·霍普金斯的顶级表演。', 'rating': '8.9', 'title': '沉默的羔羊'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=75&filter=>
+{'quote': '小清新的故事里注入了大历史的情怀。', 'rating': '8.9', 'title': '布达佩斯大饭店'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=75&filter=>
+{'quote': '人的命运被自己瞬间的抉择改变。', 'rating': '8.9', 'title': '蝴蝶效应'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=75&filter=>
+{'quote': '昔日翩翩少年，今日大腹便便。', 'rating': '8.9', 'title': '禁闭岛'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=75&filter=>
+{'quote': '孪生蝙蝠侠大战克隆金刚狼。', 'rating': '8.9', 'title': '致命魔术'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=75&filter=>
+{'quote': '人生中应该拥有这样的一段豁然开朗。', 'rating': '9.0', 'title': '心灵捕手'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=75&filter=>
+{'quote': '穷尽一生，我们要学会的，不过是彼此拥抱。', 'rating': '9.0', 'title': '超脱'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=75&filter=>
+{'quote': '故事的高级讲法。', 'rating': '8.9', 'title': '低俗小说'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=75&filter=>
+{'quote': '大时代中的人生，小人物的悲喜。', 'rating': '9.3', 'title': '摩登时代'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=75&filter=>
+{'quote': '我是一个演员。', 'rating': '8.8', 'title': '喜剧之王'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=75&filter=>
+{'quote': '爱情纠缠，男女一致。', 'rating': '9.0', 'title': '春光乍泄'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=75&filter=>
+{'quote': '魔法的密室之门已打开...', 'rating': '8.9', 'title': '哈利·波特与密室'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=75&filter=>
+{'quote': '最不可能的那个人永远是最可能的。', 'rating': '8.9', 'title': '致命ID'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=75&filter=>
+{'quote': '海豚的微笑，是世界上最高明的伪装。', 'rating': '9.3', 'title': '海豚湾'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=75&filter=>
+{'quote': '关于连环杀人悬案的集体回忆。', 'rating': '8.9', 'title': '杀人回忆'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=75&filter=>
+{'quote': '往事如烟，无处祭奠。', 'rating': '9.1', 'title': '美国往事'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=75&filter=>
+{'quote': '我们都曾经是一一。', 'rating': '9.1', 'title': '一一'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=75&filter=>
+{'quote': '梦的勾结。', 'rating': '9.0', 'title': '红辣椒'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=75&filter=>
+{'quote': '约翰尼·德普的独角戏。', 'rating': '8.8', 'title': '加勒比海盗'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=75&filter=>
+{'quote': '警察抓小偷，老鼠玩死猫。', 'rating': '8.8', 'title': '七宗罪'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=75&filter=>
+{'quote': '华太师是黄霑，吴镇宇四大才子之一。', 'rating': '8.7', 'title': '唐伯虎点秋香'}
+2024-12-12 11:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/top250?start=75&filter=>
+{'quote': '人言可畏。', 'rating': '9.1', 'title': '狩猎'}
+2024-12-12 11:53:07 [scrapy.core.engine] INFO: Closing spider (finished)
+2024-12-12 11:53:07 [scrapy.extensions.feedexport] INFO: Stored json feed (250 items) in: douban1.json
+2024-12-12 11:53:07 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 3355,
+ 'downloader/request_count': 10,
+ 'downloader/request_method_count/GET': 10,
+ 'downloader/response_bytes': 120172,
+ 'downloader/response_count': 10,
+ 'downloader/response_status_count/200': 10,
+ 'elapsed_time_seconds': 0.811265,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2024, 12, 12, 3, 53, 7, 573022),
+ 'httpcompression/response_bytes': 658471,
+ 'httpcompression/response_count': 10,
+ 'item_scraped_count': 250,
+ 'log_count/DEBUG': 260,
+ 'log_count/INFO': 11,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 10,
+ 'scheduler/dequeued': 10,
+ 'scheduler/dequeued/memory': 10,
+ 'scheduler/enqueued': 10,
+ 'scheduler/enqueued/memory': 10,
+ 'start_time': datetime.datetime(2024, 12, 12, 3, 53, 6, 761757)}
+2024-12-12 11:53:07 [scrapy.core.engine] INFO: Spider closed (finished)
