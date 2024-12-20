@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<h1 id="box">你好</h1>
+
+<body>
+
+<script>
+
+function cc(a, b) {
+    console.log(a + b)
+    console.log('调用的cc函数')
+}
+
+
+function bb(a, b){
+    console.log(a + b)
+    cc()
+    console.log('调用的bb函数')
+}
+
+function aa(a, b) {
+    bb(a, b)
+    console.log('调用的aa函数')
+}
+
+aa(1, 2)
+
+
+</script>
+</body>
+</html>

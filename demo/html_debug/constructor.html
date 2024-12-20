@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+function check() {
+    function doCheck(a) {
+        f1=function() {};
+        f2=f1["constructor"];
+        f3=f2("debugger");
+        f4=f3();
+        (function() {}["constructor"]("debugger")()); //debugger
+        doCheck(++a);
+    }
+    try {
+        doCheck(0)
+    } catch(err) {
+        console.log(err)
+    }
+};
+check()
+
+variable = Function("debugger;");
+variable();
+</script>
+hello
+</body>
+</html>

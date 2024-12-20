@@ -1,0 +1,271 @@
+Metadata-Version: 2.1
+Name: scrapy-redis
+Version: 0.9.1
+Summary: Redis-based components for Scrapy.
+Home-page: https://github.com/rmax/scrapy-redis
+Author: R Max Espinoza
+Author-email: hey@rmax.dev
+License: MIT
+Keywords: scrapy-redis
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: scrapy >=2.6.0
+Requires-Dist: redis >=4.2
+Requires-Dist: six >=1.15
+
+============
+Scrapy-Redis
+============
+
+.. image:: https://readthedocs.org/projects/scrapy-redis/badge/?version=latest
+        :alt: Documentation Status
+        :target: https://readthedocs.org/projects/scrapy-redis/?badge=latest
+
+.. image:: https://img.shields.io/pypi/v/scrapy-redis.svg
+        :target: https://pypi.python.org/pypi/scrapy-redis
+
+.. image:: https://img.shields.io/pypi/pyversions/scrapy-redis.svg
+        :target: https://pypi.python.org/pypi/scrapy-redis
+
+.. image:: https://github.com/rmax/scrapy-redis/actions/workflows/builds.yml/badge.svg
+        :target: https://github.com/rmax/scrapy-redis/actions/workflows/builds.yml
+        
+.. image:: https://github.com/rmax/scrapy-redis/actions/workflows/checks.yml/badge.svg
+        :target: https://github.com/rmax/scrapy-redis/actions/workflows/checks.yml
+        
+.. image:: https://github.com/rmax/scrapy-redis/actions/workflows/tests.yml/badge.svg
+        :target: https://github.com/rmax/scrapy-redis/actions/workflows/tests.yml
+        
+.. image:: https://codecov.io/github/rmax/scrapy-redis/coverage.svg?branch=master
+        :alt: Coverage Status
+        :target: https://codecov.io/github/rmax/scrapy-redis
+
+.. image:: https://img.shields.io/badge/security-bandit-green.svg
+        :alt: Security Status
+        :target: https://github.com/rmax/scrapy-redis
+    
+Redis-based components for Scrapy.
+
+* Usage: https://github.com/rmax/scrapy-redis/wiki/Usage
+* Documentation: https://github.com/rmax/scrapy-redis/wiki.
+* Release: https://github.com/rmax/scrapy-redis/wiki/History
+* Contribution: https://github.com/rmax/scrapy-redis/wiki/Getting-Started
+* LICENSE: MIT license
+
+Features
+--------
+
+* Distributed crawling/scraping
+
+    You can start multiple spider instances that share a single redis queue.
+    Best suitable for broad multi-domain crawls.
+
+* Distributed post-processing
+
+    Scraped items gets pushed into a redis queued meaning that you can start as
+    many as needed post-processing processes sharing the items queue.
+
+* Scrapy plug-and-play components
+
+    Scheduler + Duplication Filter, Item Pipeline, Base Spiders.
+
+* In this forked version: added ``json`` supported data in Redis
+
+    data contains ``url``, ```meta``` and other optional parameters. ``meta`` is a nested json which contains sub-data.
+    this function extract this data and send another FormRequest with ``url``, ``meta`` and addition ``formdata``.
+
+    For example:
+
+    .. code-block:: json
+
+        { "url": "https://exaple.com", "meta": {"job-id":"123xsd", "start-date":"dd/mm/yy"}, "url_cookie_key":"fertxsas" }
+
+    this data can be accessed in `scrapy spider` through response.
+    like: `request.url`, `request.meta`, `request.cookies`
+    
+.. note:: This features cover the basic case of distributing the workload across multiple workers. If you need more features like URL expiration, advanced URL prioritization, etc., we suggest you to take a look at the Frontera_ project.
+
+Requirements
+------------
+
+* Python 3.7+
+* Redis >= 5.0
+* ``Scrapy`` >=  2.0
+* ``redis-py`` >= 4.0
+
+Installation
+------------
+
+From pip 
+
+.. code-block:: bash
+
+    pip install scrapy-redis
+
+From GitHub
+
+.. code-block:: bash
+
+    git clone https://github.com/darkrho/scrapy-redis.git
+    cd scrapy-redis
+    python setup.py install
+
+.. note:: For using this json supported data feature, please make sure you have not installed the scrapy-redis through pip. If you already did it, you first uninstall that one.
+  
+.. code-block:: bash
+
+    pip uninstall scrapy-redis
+
+Alternative Choice
+---------------------------
+
+Frontera_  is a web crawling framework consisting of `crawl frontier`_, and distribution/scaling primitives, allowing to build a large scale online web crawler.
+
+.. _Frontera: https://github.com/scrapinghub/frontera
+.. _crawl frontier: http://nlp.stanford.edu/IR-book/html/htmledition/the-url-frontier-1.html
+
+=======
+History
+=======
+
+.. bumpversion marker
+
+0.9.1 (2024-07-06)
+------------------
+* Fixed docs build.
+
+0.9.0 (2024-07-06)
+------------------
+* Fixed ``Scheduler`` not compatible with BaseDupeFilter (#294)
+* Added precommit hooks.
+* Switched to Python 3.12 as default build version.
+
+0.8.0 (2024-07-03)
+------------------
+* Fixed request fingerprint method.
+* Fixed support for Scrapy 2.6+.
+* Fixed tox tests and github workflow.
+* Deprecated ``REDIS_START_URLS_BATCH_SIZE``.
+
+0.7.3 (2022-07-21)
+------------------
+* Move docs to GitHub Wiki
+* Update tox and support dynamic tests
+* Update support for json data
+* Refactor max idle time
+* Add support for python3.7~python3.10
+* Deprecate python2.x support
+
+0.7.2 (2021-12-27)
+------------------
+* Fix RedisStatsCollector._get_key()
+* Fix redis-py dependency version
+* Added maximum idle waiting time MAX_IDLE_TIME_BEFORE_CLOSE
+
+0.7.1 (2021-03-27)
+------------------
+* Fixes datetime parse error for redis-py 3.x.
+* Add support for stats extensions.
+
+0.7.1-rc1 (2021-03-27)
+----------------------
+* Fixes datetime parse error for redis-py 3.x.
+
+0.7.1-b1 (2021-03-22)
+---------------------
+* Add support for stats extensions.
+
+0.7.0-dev (unreleased)
+----------------------
+* Unreleased.
+
+0.6.8 (2017-02-14)
+------------------
+* Fixed automated release due to not matching registered email.
+
+0.6.7 (2016-12-27)
+------------------
+* Fixes bad formatting in logging message.
+
+0.6.6 (2016-12-20)
+------------------
+* Fixes wrong message on dupefilter duplicates.
+
+0.6.5 (2016-12-19)
+------------------
+* Fixed typo in default settings.
+
+0.6.4 (2016-12-18)
+------------------
+* Fixed data decoding in Python 3.x.
+* Added ``REDIS_ENCODING`` setting (default ``utf-8``).
+* Default to ``CONCURRENT_REQUESTS`` value for ``REDIS_START_URLS_BATCH_SIZE``.
+* Renamed queue classes to a proper naming conventiong (backwards compatible).
+
+0.6.3 (2016-07-03)
+------------------
+* Added ``REDIS_START_URLS_KEY`` setting.
+* Fixed spider method ``from_crawler`` signature.
+
+0.6.2 (2016-06-26)
+------------------
+* Support ``redis_cls`` parameter in ``REDIS_PARAMS`` setting.
+* Python 3.x compatibility fixed.
+* Added ``SCHEDULER_SERIALIZER`` setting.
+
+0.6.1 (2016-06-25)
+------------------
+* **Backwards incompatible change:** Require explicit ``DUPEFILTER_CLASS``
+  setting.
+* Added ``SCHEDULER_FLUSH_ON_START`` setting.
+* Added ``REDIS_START_URLS_AS_SET`` setting.
+* Added ``REDIS_ITEMS_KEY`` setting.
+* Added ``REDIS_ITEMS_SERIALIZER`` setting.
+* Added ``REDIS_PARAMS`` setting.
+* Added ``REDIS_START_URLS_BATCH_SIZE`` spider attribute to read start urls
+  in batches.
+* Added ``RedisCrawlSpider``.
+
+0.6.0 (2015-07-05)
+------------------
+* Updated code to be compatible with Scrapy 1.0.
+* Added `-a domain=...` option for example spiders.
+
+0.5.0 (2013-09-02)
+------------------
+* Added `REDIS_URL` setting to support Redis connection string.
+* Added `SCHEDULER_IDLE_BEFORE_CLOSE` setting to prevent the spider closing too
+  quickly when the queue is empty. Default value is zero keeping the previous
+  behavior.
+* Schedule preemptively requests on item scraped.
+* This version is the latest release compatible with Scrapy 0.24.x.
+
+0.4.0 (2013-04-19)
+------------------
+* Added `RedisSpider` and `RedisMixin` classes as building blocks for spiders
+  to be fed through a redis queue.
+* Added redis queue stats.
+* Let the encoder handle the item as it comes instead converting it to a dict.
+
+0.3.0 (2013-02-18)
+------------------
+* Added support for different queue classes.
+* Changed requests serialization from `marshal` to `cPickle`.
+
+0.2.0 (2013-02-17)
+------------------
+* Improved backward compatibility.
+* Added example project.
+
+0.1.0 (2011-09-01)
+------------------
+* First release on PyPI.
