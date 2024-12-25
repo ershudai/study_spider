@@ -6,4 +6,4 @@ def md5_test2():
     print(md5.hexdigest())
 
 if __name__ == '__main__':
-    md5_test2() 
+    md5_test2()
